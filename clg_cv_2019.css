@@ -1,0 +1,249 @@
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ------------------- GENERALITES ------------------- */
+body {
+    background: #fefefe;
+    min-height: 100vh;
+    color: #09090b;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(107, 107, 107, 0.466);
+    font-family: 'Roboto', sans-serif;
+}
+i, h3 {
+    color: #8b6521;
+}
+h3 {
+    font-size: 18px;
+}
+a {
+    text-decoration: none;
+    color: #09090b;
+}
+li {
+    list-style: none;
+}
+
+/* ------------------- PAGE PRINCIPALE ------------------- */
+.blocpage {
+    display: grid;
+    background: #eee;
+    max-width: 860px;
+    margin: 20px auto;
+    padding: 20px 10px;
+    grid-template-columns: 1fr 1.7fr;
+    grid-auto-rows: minmax(200px, auto);
+    box-shadow: 5px -5px 30px 5px #0000002c;
+    border-radius: 3px;
+    border: 1px solid rgba(43, 43, 43, 0.6);
+}
+
+/* ------------------- PHOTO & INFOS------------------- */
+.blocface {
+    display: flex;
+    grid-column: 1;
+    grid-row: 1;
+    margin: auto;
+    padding: 6px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #8b6521;
+    border-radius: 50%;
+}
+.face {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #09090b;
+    border-radius: 50%;
+    background-image: url("img/face_wip_2.jpg");
+    background-size: 125%;
+    background-repeat: no-repeat;
+    background-position-x: -17px;
+    background-position-y: -10px;
+}
+.coordonnees {
+    grid-column: 1;
+    grid-row: 2;
+    text-align: center;
+    margin: 30px 0;
+}
+.coordonnees i {
+    padding-bottom: 8px;
+}
+.adresse, .telephone, .liens {
+    border-top: 1px solid #09090b54;
+    padding: 10px 0; 
+    margin: 0 50px;
+}
+.liens {
+    border-bottom: 1px solid #09090b54;
+}
+.liens a {
+    padding-right: 10px;
+    font-style: italic;
+}
+.liens a:nth-child(1) {
+    padding-right: 0;
+}
+/* ------------------- A PROPOS DE MOI ------------------- */
+.projet {
+    grid-column: 1;
+    grid-row: 3;
+}
+.projet h3 {
+    padding-left: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.projet p {
+    padding: 15px 30px;
+    text-align: justify;
+    margin-bottom: 20px;
+    line-height: 22px;
+}
+
+/* ------------------- CODES ET LOGICIELS ------------------- */
+.pratiques {
+    grid-column: 2;
+    grid-row: 4;
+}
+.pratiques h3 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.pratiques h4 {
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.pratiques ul {
+    padding: 3px 0 0 3px;
+    margin-bottom: 0;
+}
+.pratiques li {
+    font-size: 14px;
+}
+.codes, .logiciels, .langues {
+    float: left;
+    padding: 15px 0 0 30px;
+}
+.codes, .logiciels {
+    padding-right: 50px;
+}
+
+/* ------------------- TITRE ET RECHERCHE ------------------- */
+.titre {
+    grid-column: 2;
+    grid-row: 1;
+    margin-right: 30px;
+    padding-top: 20px;
+}
+.titre h1 {
+    text-transform: uppercase;
+}
+.titre h3 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-bottom: 12px;
+}
+.titre p {
+    padding: 12px 0 30px 0; 
+    text-align: justify;
+    font-style: italic;
+    font-size: 13px;
+    border-top: 1px solid #09090b54;
+    line-height: 18px;
+}
+
+/* ------------------- FORMATIONS/EXPERIENCES/DIPLOMES ------------------- */
+.experiences {
+    grid-column: 2;
+    grid-row: 2;
+}
+.diplomes {
+    grid-column: 2;
+    grid-row: 3;
+}
+.experiences h3, .diplomes h3 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.experiences ul, .diplomes ul {
+    padding: 15px 30px;
+}
+.bloc_list {
+    margin-bottom: 15px;
+}
+.bloc_list:nth-last-child() {
+    margin-bottom: 0;
+}
+.diplomes ul, .experiences ul {
+    position: relative;
+}
+.diplomes ul::before, .experiences ul::before {
+    content: '';
+    width: 1px;
+    height: 85%;
+    background: #09090b1e;
+    position: absolute;
+    top: 22px;
+    left: 22px;
+}
+.date {
+    position: relative;
+    font-size: 14px;
+}
+.date::before {
+    position: absolute;
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    top: 7px;
+    left: -10px;
+    background: #75541a;
+}
+.poste {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+}
+.location {
+    font-style: italic;
+    font-size: 12px;
+}
+.description {
+    font-size: 14px;
+}
+/* ------------------- HOBBIES ------------------- */
+.interets {
+    grid-column: 1;
+    grid-row: 4;
+}
+.interets h3 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    padding-left: 30px;
+}
+.interets i {
+    font-size: 24px;
+    background-repeat: round;
+    background: linear-gradient(90deg, #9b7534, #2d2d38);
+    -webkit-background-clip: text;
+    background-size: 110%;
+    -webkit-text-fill-color: transparent;
+    padding-right: 10px;
+}
+.interets i:nth-child(4) {
+    padding-right: 0px;
+}
+.img_interets {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 30px;
+}
