@@ -247,3 +247,119 @@ li {
     justify-content: space-around;
     padding: 0 30px;
 }
+
+/* ------------------- MEDIA ------------------- */
+/* ------------------- QUERRIES ---------------- */
+
+@media screen and (max-width: 580px) {
+    .blocpage {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        grid-template-columns: 1fr;
+        grid-auto-rows: minmax(200px, auto);
+    }
+/* ------------------- PHOTO ------------------- */
+    .blocface {
+        grid-column: 1;
+        grid-row: 1;
+    }
+/* ------------------- COORDONNEES ------------------- */
+    .coordonnees {
+        grid-column: 1;
+        grid-row: 3;
+    }
+/* ------------------- PROJET ------------------- */
+    .projet {
+        grid-column: 1;
+        grid-row: 4;
+    }
+    .projet p {
+        font-size: 14px;
+        letter-spacing: 0;
+    }
+/* ------------------- CODES, LOGICIELS ET LANGAGES ------------------- */
+    .pratiques {
+        grid-column: 1;
+        grid-row: 7;
+        margin-bottom: 20px;
+    }
+    .pratiques h3 {
+        letter-spacing: 0;
+        margin: 0 30px;
+    }
+    .pratiques h4 {
+        font-size: 12px;
+    }
+    .pratiques li {
+        font-size: 12px;
+    }
+    .codes, .logiciels, .langues {
+        padding: 15px 0 0 30px;
+    }
+    .codes, .logiciels {
+        padding-right: 10px;
+    }
+    
+/* ------------------- TITRE ------------------- */
+    .titre {
+        grid-column: 1;
+        grid-row: 2;
+        padding-top: 5px;
+        width: 100%;
+    }
+    .titre h1 {
+        text-align: center;
+        font-size: 24px;
+    }
+    .titre h3 {
+        font-size: 14px;
+        text-align: center;
+    }
+    .titre p {
+        text-align: justify;
+        font-style: italic;
+        font-size: 14px;
+        border-top: 1px solid #09090b54;
+        line-height: 20px;
+        margin: 12px 30px 0 30px;
+    }
+/* ------------------- EXPERIENCES ET DIPLOMES ------------------- */
+    .experiences {
+        grid-column: 1;
+        grid-row: 5;
+    }
+    .diplomes {
+        grid-column: 1;
+        grid-row: 6;
+    }
+    .experiences h3, .diplomes h3 {
+        letter-spacing: 0;
+        padding: 0 30px;
+    }
+    .experiences ul, .diplomes ul {
+        padding: 15px 38px;
+    }
+    .diplomes ul::before, .experiences ul::before {
+        left: 30px;
+    }
+    .poste {
+        font-size: 12px;
+        font-weight: 600;
+    }
+    .description {
+        font-size: 12px;
+    }
+    .date {
+        letter-spacing: 1px;
+    }
+/* ------------------- INTERETS ------------------- */
+    .interets {
+        grid-column: 1;
+        grid-row: 8;
+    }
+    .interets h3 {
+        letter-spacing: 0;
+        margin-bottom: 20px;
+    }
+}
