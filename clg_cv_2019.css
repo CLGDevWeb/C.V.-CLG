@@ -25,6 +25,9 @@ a {
     text-decoration: none;
     color: #09090b;
 }
+a:focus, a:hover {
+    color: #da9d33;
+}
 li {
     list-style: none;
 }
@@ -89,6 +92,9 @@ li {
 }
 .liens a:nth-child(1) {
     padding-right: 0;
+}
+.liens a:focus, .liens a :hover {
+    color: #da9d33;
 }
 /* ------------------- A PROPOS DE MOI ------------------- */
 .projet {
