@@ -1,49 +1,56 @@
-*, *::before, *::after {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+:root {
+    --fontClr: #09090b;
+    --lightGold: #da9d33;
+    --darkGold: #8b6521;
+    --dotDate: #75541a;
+    --bgClr: rgba(107, 107, 107, 0.466);
+    --darkGrey: #2d2d38;
+    --pageclr: #eee;
+    --pageShw: #0000002c;
+    --border: #09090b54;
+    --borderClr: rgba(43, 43, 43, 0.6);
 }
-
 /* ------------------- GENERALITES ------------------- */
 body {
-    background: #fefefe;
+    background: var(--bgClr);
     min-height: 100vh;
-    color: #09090b;;
+    color: var(--fontClr);
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(107, 107, 107, 0.466);
     font-family: 'Roboto', sans-serif;
 }
 i, h3 {
-    color: #8b6521;
+    color: var(--darkGold);
 }
 h3 {
-    font-size: 1.1rem;
+    font-size: 1.8rem;
 }
 a {
     text-decoration: none;
-    color: #09090b;
+    color: var(--fontClr);
 }
 a:focus, a:hover {
-    color: #da9d33;
+    color: var(--lightGold);
 }
 li {
     list-style: none;
 }
-
+.techno {
+    font-style: italic;
+}
 /* ------------------- PAGE PRINCIPALE ------------------- */
 .blocpage {
     display: grid;
-    background: #eee;
-    max-width: 860px;
-    margin: 20px auto;
-    padding: 20px 10px;
+    background: var(--pageclr);
+    max-width: 86rem;
+    margin: 2rem auto;
+    padding: 2rem 1rem;
     grid-template-columns: 1fr 1.7fr;
-    grid-auto-rows: minmax(200px, auto);
-    box-shadow: 5px -5px 30px 5px #0000002c;
-    border-radius: 3px;
-    border: 1px solid rgba(43, 43, 43, 0.6);
+    grid-auto-rows: minmax(20rem, auto);
+    box-shadow: .5rem -.5rem 3rem .5rem var(--pageShw);
+    border-radius: .2rem;
+    border: .1rem solid var(--borderClr);
 }
 
 /* ------------------- PHOTO & INFOS------------------- */
@@ -52,46 +59,47 @@ li {
     grid-column: 1;
     grid-row: 1;
     margin: auto;
-    padding: 6px;
+    padding: .6rem;
     justify-content: center;
     align-items: center;
-    border: 1px solid #8b6521;
+    border: .1rem solid var(--darkGold);
     border-radius: 50%;
 }
 .face {
-    width: 150px;
-    height: 150px;
-    border: 1px solid #09090b;
+    width: 15rem;
+    height: 15rem;
+    border: 1px solid var(--fontClr);
     border-radius: 50%;
-    background-image: url("img/face_wip_2.jpg");
+    background-image: url("../img/face_wip_2.jpg");
     background-size: 125%;
     background-repeat: no-repeat;
-    background-position-x: -17px;
-    background-position-y: -10px;
+    background-position-x: -1.7rem;
+    background-position-y: -1rem;
 }
 .coordonnees {
     grid-column: 1;
     grid-row: 2;
     text-align: center;
-    margin: 30px 0;
+    margin: 3rem 0;
+    font-size: 1.4rem;
 }
 .coordonnees i {
-    padding-bottom: 8px;
+    padding-bottom: .8rem;
 }
 .adresse, .telephone, .liens, .mobile {
-    border-top: 1px solid #09090b54;
-    padding: 10px 0; 
-    margin: 0 50px;
+    border-top: .1rem solid var(--border);
+    padding: 1rem 0; 
+    margin: 0 5rem;
 }
 .liens {
-    border-bottom: 1px solid #09090b54;
+    border-bottom: .1rem solid var(--border);
 }
 .liens a {
-    padding: 0 10px;
+    padding: 0 1rem;
     font-style: italic;
 }
 .liens a:focus, .liens a :hover {
-    color: #da9d33;
+    color: var(--lightGold);
 }
 /* ------------------- A PROPOS DE MOI ------------------- */
 .projet {
@@ -99,16 +107,16 @@ li {
     grid-row: 3;
 }
 .projet h3 {
-    padding-left: 30px;
+    padding-left: 3rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: .2rem;
 }
 .projet p {
-    padding: 15px 30px;
+    padding: 1.5rem 3rem;
     text-align: justify;
-    margin-bottom: 20px;
-    line-height: 22px;
-    font-size: 14px;
+    margin-bottom: 2rem;
+    line-height: 2.2rem;
+    font-size: 1.4rem;
 }
 .projet a {
     font-style: italic;
@@ -121,49 +129,49 @@ li {
 }
 .competences h3 {
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: .2rem;
 }
 .competences h4 {
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 .competences ul {
-    padding: 3px 0 0 3px;
+    padding: .3rem 0 0 .3rem;
     margin-bottom: 0;
 }
 .competences li {
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 .codes, .logiciels, .langues {
     float: left;
-    padding: 15px 0 0 30px;
+    padding: 1.5rem 0 0 3rem;
 }
 .codes, .logiciels {
-    padding-right: 50px;
+    padding-right: 5rem;
 }
 
 /* ------------------- TITRE ET RECHERCHE ------------------- */
 .titre {
     grid-column: 2;
     grid-row: 1;
-    margin-right: 30px;
-    padding-top: 20px;
+    margin-right: 3rem;
+    padding-top: 2rem;
 }
 .titre h1 {
     text-transform: uppercase;
 }
 .titre h3 {
     text-transform: uppercase;
-    letter-spacing: 2px;
-    padding-bottom: 12px;
+    letter-spacing: .2rem;
+    padding-bottom: 1.2rem;
 }
 .titre p {
-    padding: 12px 0 30px 0; 
+    padding: 1.2rem 0 3rem 0; 
     text-align: justify;
     font-style: italic;
-    font-size: 13px;
-    border-top: 1px solid #09090b54;
-    line-height: 18px;
+    font-size: 1.3rem;
+    border-top: .1rem solid var(--border);
+    line-height: 1.8rem;
 }
 
 /* ------------------- FORMATIONS/EXPERIENCES/DIPLOMES ------------------- */
@@ -177,13 +185,13 @@ li {
 }
 .experiences h3, .diplomes h3 {
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: .2rem;
 }
 .experiences ul, .diplomes ul {
-    padding: 15px 30px;
+    padding: 1.5rem 3rem;
 }
 .bloc_list {
-    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
 }
 .bloc_list:nth-last-child() {
     margin-bottom: 0;
@@ -193,38 +201,38 @@ li {
 }
 .diplomes ul::before, .experiences ul::before {
     content: '';
-    width: 1px;
+    width: .1rem;
     height: 85%;
     background: #09090b1e;
     position: absolute;
-    top: 22px;
-    left: 22px;
+    top: 2.2rem;
+    left: 2.2rem;
 }
 .date {
     position: relative;
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 .date::before {
     position: absolute;
     content: '';
-    width: 5px;
-    height: 5px;
+    width: .5rem;
+    height: .5rem;
     border-radius: 50%;
-    top: 7px;
-    left: -10px;
-    background: #75541a;
+    top: .7rem;
+    left: -1rem;
+    background: var(--dotDate);
 }
 .poste {
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 600;
 }
 .location {
     font-style: italic;
-    font-size: 12px;
+    font-size: 1.2rem;
 }
 .description {
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 /* ------------------- HOBBIES ------------------- */
 .interets {
@@ -233,65 +241,65 @@ li {
 }
 .interets h3 {
     text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 30px;
-    padding-left: 30px;
+    letter-spacing: .2rem;
+    margin-bottom: 3rem;
+    padding-left: 3rem;
 }
 .interets i {
-    font-size: 24px;
+    font-size: 2.4rem;
     background-repeat: round;
-    background: linear-gradient(90deg, #9b7534, #2d2d38);
+    background: linear-gradient(90deg, var(--dotDate), var(--darkGrey));
     -webkit-background-clip: text;
     background-size: 110%;
     -webkit-text-fill-color: transparent;
-    padding-right: 10px;
+    padding-right: 1rem;
 }
 .interets i:nth-child(4) {
-    padding-right: 0px;
+    padding-right: 0;
 }
 .img_interets {
     display: flex;
     justify-content: space-around;
-    padding: 0 30px;
+    padding: 0 3rem;
 }
 
 /* -------------------------------- MEDIA -------------------------------- */
 /* -------------------------------- QUERRIES -------------------------------- */
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 38rem) {
     .blocpage {
         grid-template-columns: 1fr;
-        grid-auto-rows: minmax(200px, auto);
+        grid-auto-rows: minmax(20rem, auto);
         margin: 0;
     }
 /* ------------------- PHOTO ------------------- */
     .blocface {
         grid-column: 1;
         grid-row: 1;
-        padding: 5px;
-        border: 1px solid #8b6521;
+        padding: .5rem;
+        border: .1rem solid #8b6521;
     }
     .face {
-        width: 150px;
-        height: 150px;
-        border: 1px solid #09090b;
+        width: 15rem;
+        height: 15rem;
+        border: .1rem solid #09090b;
     }
 /* ------------------- COORDONNEES ------------------- */
     .coordonnees {
         grid-column: 1;
         grid-row: 3;
         text-align: center;
-        margin: 5px 0 30px 0;
+        margin: .5rem 0 3rem 0;
     }
     .coordonnees i {
-        padding-bottom: 8px;
+        padding-bottom: .8rem;
     }
     .adresse, .telephone, .liens {
-        border-top: 1px solid #09090b54;
-        padding: 10px 0; 
-        margin: 0 30px;
+        border-top: .1rem solid var(--border);
+        padding: 1rem 0; 
+        margin: 0 3rem;
     }
     .liens a {
-        padding-right: 10px;
+        padding-right: 1rem;
         font-style: italic;
     }
     .liens a:nth-child(1) {
@@ -304,51 +312,51 @@ li {
         grid-row: 4;
     }
     .projet p {
-        font-size: 14px;
+        font-size: 1.4rem;
         letter-spacing: 0;
     }
 /* ------------------- CODES, LOGICIELS ET LANGAGES ------------------- */
     .competences {
         grid-column: 1;
         grid-row: 7;
-        margin-bottom: 20px;
+        margin-bottom: 2rem;
     }
     .competences h3 {
         letter-spacing: 0;
-        margin: 0 30px;
+        margin: 0 3rem;
     }
     .competences h4 {
-        font-size: 12px;
+        font-size: 1.2rem;
     }
     .competences li {
-        font-size: 12px;
+        font-size: 1.2rem;
     }
     .codes, .logiciels, .langues {
-        padding: 15px 0 0 30px;
+        padding: 1.5rem 0 0 3rem;
     }
     .codes, .logiciels {
-        padding-right: 10px;
+        padding-right: 1rem;
     }
     
 /* ------------------- TITRE ------------------- */
     .titre {
         grid-column: 1;
         grid-row: 2;
-        padding-top: 5px;
+        padding-top: .5rem;
         width: 100%;
     }
     .titre h1 {
         text-align: center;
-        font-size: 24px;
+        font-size: 2.4rem;
     }
     .titre h3 {
-        font-size: 16px;
+        font-size: 1.6rem;
         text-align: center;
     }
     .titre p {
-        padding: 12px 0 8px 0; 
-        font-size: 14px;
-        margin: 12px 30px 0 30px;
+        padding: 1.2rem 0 .8rem 0; 
+        font-size: 1.4rem;
+        margin: 1.2rem 3rem 0 3rem;
     }
 /* ------------------- EXPERIENCES ET DIPLOMES ------------------- */
     .experiences {
@@ -361,23 +369,23 @@ li {
     }
     .experiences h3, .diplomes h3 {
         letter-spacing: 0;
-        padding: 0 30px;
+        padding: 0 3rem;
     }
     .experiences ul, .diplomes ul {
-        padding: 15px 38px;
+        padding: 1.5rem 3.8rem;
     }
     .diplomes ul::before, .experiences ul::before {
-        left: 30px;
+        left: 3rem;
     }
     .poste {
-        font-size: 12px;
+        font-size: 1.2rem;
         font-weight: 600;
     }
     .description {
-        font-size: 12px;
+        font-size: 1.2rem;
     }
     .date {
-        letter-spacing: 1px;
+        letter-spacing: .1rem;
     }
 /* ------------------- INTERETS ------------------- */
     .interets {
@@ -386,6 +394,6 @@ li {
     }
     .interets h3 {
         letter-spacing: 0;
-        margin-bottom: 20px;
+        margin-bottom: 2rem;
     }
 }
