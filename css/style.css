@@ -144,7 +144,7 @@ li {
 }
 .codes, .logiciels, .langues {
     float: left;
-    padding: 1.5rem 0 0 3rem;
+    padding: 1.5rem 0 2.8rem 3rem;
 }
 .codes, .logiciels {
     padding-right: 5rem;
